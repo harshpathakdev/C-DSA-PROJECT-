@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: dictionary-backend-api
+    env: node
+    region: singapore
+    buildCommand: npm --prefix backend install
+    startCommand: node backend/server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://saurabhkumar95487063_db_user:kNIe69VwQ102GrQQ@cluster0.n9jojc5.mongodb.net/dictionary?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: dictionary_app_super_secret_jwt_key_2026
+      - key: GEMINI_API_KEY
+        value: AQ.Ab8RN6IgkPawJSyl5uVxywp0nRPZYZV_CHpnLKDNvy0gMbdGNw
+
